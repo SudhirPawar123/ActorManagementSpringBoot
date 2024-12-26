@@ -28,13 +28,13 @@ public class ActorController {
  private ActorService actorService;
  
  //@RequestMapping(method=RequestMethod.POST,value="/actors/addActor" )
- @PostMapping(value="/actors/addActor")
+ @PostMapping(value="/actors/saveActor")
 	public ResponseEntity<ResponseStructure<Actor>>  addActor(@RequestBody Actor actor) {
 		return actorService.addActor(actor);
 	}
 	 
  //@RequestMapping(method = RequestMethod.GET ,value="/actors/findByActorId" )
- @GetMapping(value="/actors/findByActor/{actorId}")
+ @GetMapping(value="/actors/findByActorId/{actorId}")
  public ResponseEntity<ResponseStructure<Actor>> findByActorId(@PathVariable int actorId) {
 	return actorService.findByActorId(actorId);
 }
