@@ -34,7 +34,7 @@ public class ActorController {
 	}
 	 
  //@RequestMapping(method = RequestMethod.GET ,value="/actors/findByActorId" )
- @GetMapping(value="/actors/findByActorId/{actorId}")
+ @GetMapping(value="/actors/findByActor/{actorId}")
  public ResponseEntity<ResponseStructure<Actor>> findByActorId(@PathVariable int actorId) {
 	return actorService.findByActorId(actorId);
 }
